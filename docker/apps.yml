@@ -1,0 +1,50 @@
+version: '3.7'
+
+services:
+  config-service:
+    image: vsposato/config-service
+    container_name: config-service
+    environment:
+      SERVER_PORT: 8088
+      DB_HOST: postgres
+    ports: [ 8081:8081 ]
+
+  department-service:
+    image: vsposato/department-service
+    container_name: department-service
+    environment:
+      SERVER_PORT: 8081
+      DB_HOST: postgres
+    ports: [ 8081:8081 ]
+
+  discovery-service:
+    image: vsposato/discovery-service
+    container_name: discovery-service
+    environment:
+      SERVER_PORT: 8081
+      DB_HOST: postgres
+    ports: [ 8081:8081 ]
+
+  employee-service:
+    image: vsposato/employee-service
+    container_name: employee-service
+    environment:
+      SERVER_PORT: 8081
+      DB_HOST: postgres
+    ports: [ 8081:8081 ]
+
+  gateway-service:
+    image: vsposato/gateway-service
+    container_name: gateway-service
+    environment:
+      SERVER_PORT: 8081
+      DB_HOST: postgres
+    ports: [ 8081:8081 ]
+
+  organization-service:
+    image: vsposato/organization-service
+    container_name: organization-service
+    environment:
+      SERVER_PORT: 8081
+      DB_HOST: postgres
+    ports: [ 8081:8081 ]
